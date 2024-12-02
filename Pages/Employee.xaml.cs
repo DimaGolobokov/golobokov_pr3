@@ -1,4 +1,5 @@
-﻿using System;
+﻿using golobokov_pr3.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +13,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using golobokov_pr3.Models;
 
 namespace golobokov_pr3.Pages
 {
     /// <summary>
-    /// Interaction logic for Client.xaml
+    /// Interaction logic for Employee.xaml
     /// </summary>
-    public partial class Client : Page
+    public partial class Employee : Page
     {
-        public Client(Auth user, string role)
+        public Employee(Auth user, string role)
         {
             InitializeComponent();
         }
