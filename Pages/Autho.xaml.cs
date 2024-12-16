@@ -52,11 +52,23 @@ namespace golobokov_pr3.Pages
             tblCaptcha.TextDecorations = TextDecorations.Strikethrough;
         }
 
+        private bool IsAccessTimeValid()
+        {
+            int currentHour = DateTime.Now.Hour;
+            return currentHour >= 10 && currentHour < 19;
+        }
+
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             if (lockTimeRemaining > 0)
             {
                 MessageBox.Show("Пожалуйста, подождите завершения блокировки.");
+                return;
+            }
+
+            if (!IsAccessTimeValid())
+            {
+                MessageBox.Show("Доступ к системе разрешен только в рабочее время (с 10:00 до 19:00).");
                 return;
             }
 

@@ -9,6 +9,10 @@
       Title="Employee">
 
     <Grid>
-        
+        <TextBlock x:Name="GreetingTextBlock"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   FontSize="24"
+                   Margin="0,20,0,0"/>
     </Grid>
 </Page>
